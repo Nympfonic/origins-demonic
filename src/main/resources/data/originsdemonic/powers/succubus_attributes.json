@@ -1,0 +1,141 @@
+{
+    "type": "origins:multiple",
+    "succubus_immunities": {
+        "type": "origins:effect_immunity",
+        "name": "Succubus Immunities",
+        "description": "A succubus is immune to diseases, poison, and is unaffected by luck",
+        "effects": [
+            "minecraft:poison",
+            "minecraft:nausea",
+            "minecraft:hunger",
+            "minecraft:wither",
+            "minecraft:saturation",
+            "minecraft:hero_of_the_village",
+            "minecraft:luck",
+            "minecraft:unluck"
+        ]
+    },
+    "succubus_fire_resistance": {
+        "type": "origins:fire_immunity",
+        "name": "Fire Immunity",
+        "description": "Born from the Nether lava pits, succubi are immune to fire"
+    },
+    "succubus_attributes": {
+        "type": "origins:attribute",
+        "name": "Succubus Attributes",
+        "description": "Succubi have more health and move slightly faster than the average human",
+        "modifiers": [
+            {
+                "name": "Max health increase",
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": 10
+            },
+            {
+                "name": "Speed increase",
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_base",
+                "value": 0.25
+            }
+        ]
+    },
+    "succubus_damage_taken": {
+        "type": "origins:modify_damage_taken",
+        "name": "Damage Resilience",
+        "description": "Succubi, born in the Nether, take reduced damage from all sources",
+        "modifier": {
+            "name": "Resilient to damage",
+            "operation": "multiply_total",
+            "value": 0.8
+        }
+    },
+    "succubus_armor_restriction": {
+        "type": "origins:restrict_armor",
+        "name": "Skin Exposure",
+        "description": "Succubi despise wearing armor thus are unable to equip any armor",
+        "head": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "chest": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "legs": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "feet": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "succubus_no_sleep": {
+        "type": "origins:prevent_sleep",
+        "name": "Demonic Circadian Rhythm",
+        "description": "Demonic creatures, like the succubus, do not sleep",
+        "message": "You don't need sleep"
+    },
+    "succubus_no_bad_food": {
+        "type": "origins:prevent_item_use",
+        "name": "No Bad Food",
+        "description": "While a succubus can eat mortal food, their pride and disdain will prevent them from eating rotten or raw food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "minecraft:rotten_flesh"
+                },
+                {
+                    "item": "minecraft:spider_eye"
+                },
+                {
+                    "item": "minecraft:poisonous_potato"
+                },
+                {
+                    "item": "minecraft:beetroot"
+                },
+                {
+                    "item": "minecraft:beef"
+                },
+                {
+                    "item": "minecraft:chicken"
+                },
+                {
+                    "item": "minecraft:cod"
+                },
+                {
+                    "item": "minecraft:mutton"
+                },
+                {
+                    "item": "minecraft:porkchop"
+                },
+                {
+                    "item": "minecraft:chicken"
+                },
+                {
+                    "item": "minecraft:rabbit"
+                },
+                {
+                    "item": "minecraft:suspicious_stew"
+                }
+            ]
+        }
+    },
+    "succubus_flight": {
+        "type": "origins:elytra_flight",
+        "name": "Succubus Flight",
+        "description": "A succubus is capable of flight to help them traverse the Nether",
+        "render_elytra": false
+    },
+    "succubus_falling": {
+        "type": "origins:modify_falling",
+        "name": "Light Feet",
+        "description": "Succubi are more resilient to the average human so they can fall further without taking damage",
+        "velocity": 0.04
+    }
+}

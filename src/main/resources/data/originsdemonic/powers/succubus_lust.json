@@ -1,0 +1,47 @@
+{
+    "type": "origins:multiple",
+    "succubus_lust": {
+        "type": "origins:self_action_on_kill",
+        "name": "Succubus Life Drain",
+        "description": "A succubus has insatiable lust which allows them to drain energy from living beings upon killing them",
+        "target_condition": {
+            "type": "origins:entity_group",
+            "group": "undead",
+            "inverted": true
+        },
+        "cooldown": 100,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 2,
+            "saturation": 1
+        }
+    },
+    "no_food_saturation": {
+        "type": "origins:modify_food",
+        "name": "Succubus Satiation",
+        "description": "Succubi do not replenish their energy from ordinary food",
+        "item_condition": {
+            "type": "origins:food"
+        },
+        "food_modifier": {
+            "name": "No food points",
+            "operation": "multiply_total",
+            "value": 0
+        },
+        "saturation_modifier": {
+            "name": "No food saturation",
+            "operation": "multiply_total",
+            "value": 0
+        }
+    },
+    "faster_exhaustion": {
+        "type": "origins:modify_exhaustion",
+        "name": "Succubus Exhaustion",
+        "description": "Having a high sex drive causes the succubus to exhaust their energy faster",
+        "modifier": {
+            "name": "150% increased exhaustion rate",
+            "operation": "multiply_base",
+            "value": 1.5
+        }
+    }
+}

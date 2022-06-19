@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "originsdemonic:succubus_charm",
+        "originsdemonic:succubus_attributes",
+        "originsdemonic:succubus_lust"
+    ],
+    "icon": "minecraft:golden_sword",
+    "order": 1,
+    "impact": 3,
+    "name": "Succubus",
+    "description": "A supposedly mythological demon well known for being unfathomably attractive and enjoys seducing humanoids to satisfy their lust."
+}
